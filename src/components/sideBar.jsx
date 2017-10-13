@@ -31,6 +31,22 @@ class SideBar extends Component {
 		});
 	}
 
+	renderAccountMenu(subject) {
+		if (this.props.socialAuth.uid) {
+			return _.map(subject, ({ label }) => {
+				return (
+					<li className="nav__li__style nav__close__onclick nco" key={label}>
+						<Link className="nav__items__extra" to={"/"}>
+							{label}
+						</Link>
+					</li>
+				);
+			});
+		}
+
+		return <div />;
+	}
+
 	render() {
 		return (
 			<div>
@@ -53,9 +69,12 @@ class SideBar extends Component {
 								Categories <i className="fa fa-angle-right ml-4 mt-1" />
 							</Link>
 						</li>
-						<div className="when__logged__in">{this.renderMenu(helpMenu)}</div>
+						<div className="when__logged__in">
+							{this.renderAccountMenu(profileMenu)}
+						</div>
 
 						<hr />
+						{this.renderMenu(helpMenu)}
 					</ul>
 					<ul className="nav__items navbar__two">
 						<li className="nav__li__style back">
@@ -72,4 +91,8 @@ class SideBar extends Component {
 	}
 }
 
-export default connect(null, actions)(SideBar);
+function mapStateToProps({ socialAuth }) {
+	return { socialAuth };
+}
+
+export default connect(mapStateToProps, actions)(SideBar);

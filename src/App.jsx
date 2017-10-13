@@ -8,12 +8,11 @@ import components from "./components";
 import slidout_Jquery from "./utils/slideoutJquery";
 //import "./App.css";
 
-let { Home, Head, Header, Jumbotron, SideBar } = components;
+let { Home, Head, Header, Jumbotron, SideBar, WhatToPost, Footer } = components;
 
 class App extends Component {
 	componentDidMount() {
 		slidout_Jquery();
-		console.log(process.env);
 	}
 	render() {
 		return (
@@ -28,6 +27,7 @@ class App extends Component {
 						</section>
 						<div className="container">
 							<Route exact path="/" component={Home} />
+							<Route exact path="/post/new" component={WhatToPost} />
 						</div>
 					</div>
 				</BrowserRouter>

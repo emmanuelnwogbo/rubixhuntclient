@@ -1,6 +1,6 @@
 let defaultMenu = [{ label: "Skill Profiles" }, { label: "Projects" }];
 let profileMenu = [
-	{ label: "My SkillProfiles" },
+	{ label: "My Skill Profiles" },
 	{ label: "My Projects" },
 	{ label: "Interests" },
 	{ label: "Bookmarks" }

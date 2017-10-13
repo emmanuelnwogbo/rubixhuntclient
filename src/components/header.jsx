@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import * as actions from "../actions";
 //import "../css/header.css";
@@ -20,9 +21,34 @@ class Header extends Component {
 		log__modal.style.display = "block";
 	}
 
+	renderPostButton() {
+		if (this.props.socialAuth.uid) {
+			return (
+				<div>
+					<Link
+						to="/post/new"
+						className="btn btn-post-green text-white header__margin__left"
+					>
+						Post
+					</Link>
+				</div>
+			);
+		}
+
+		return (
+			<div>
+				<a
+					className="btn btn-post-green text-white header__margin__left"
+					onClick={this.openLoginModal}
+				>
+					Post
+				</a>
+			</div>
+		);
+	}
+
 	headerMarkUp() {
 		if (this.props.socialAuth.uid) {
-			console.log(this.props);
 			return (
 				<div className="header__loggedin__image header__margin__left">
 					<a className="dropdown-toggle" data-toggle="dropdown">
@@ -48,9 +74,7 @@ class Header extends Component {
 		);
 	}
 
-	componentDidMount() {
-		console.log(this.props);
-	}
+	componentDidMount() {}
 
 	render() {
 		return (
@@ -71,9 +95,7 @@ class Header extends Component {
 							<a className="fa fa-search" />
 							{this.headerMarkUp()}
 							<i className="pl-1" />
-							<a className="btn btn-post-green text-white header__margin__left">
-								Post
-							</a>
+							{this.renderPostButton()}
 						</div>
 					</div>
 				</header>

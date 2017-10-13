@@ -5,7 +5,15 @@ import * as actions from "../actions";
 //import "../css/jumbotron.css";
 
 class Jumbotron extends Component {
-	render() {
+	componentDidMount() {
+		console.log(this.props);
+	}
+
+	renderJumbotron() {
+		if (this.props.socialAuth.uid) {
+			return <div />;
+		}
+
 		return (
 			<div>
 				<div className="header__jumbo">
@@ -23,6 +31,14 @@ class Jumbotron extends Component {
 			</div>
 		);
 	}
+
+	render() {
+		return <div>{this.renderJumbotron()}</div>;
+	}
 }
 
-export default connect(null, actions)(Jumbotron);
+function mapStateToProps({ socialAuth }) {
+	return { socialAuth };
+}
+
+export default connect(mapStateToProps, actions)(Jumbotron);
