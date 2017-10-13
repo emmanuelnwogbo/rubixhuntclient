@@ -1,0 +1,85 @@
+/************************************
+installed fonts
+
+font-family: 'Droid Sans', sans-serif;
+font-family: 'Droid Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+************************************/
+
+/************************************
+*************************************
+*************************************
+GENERAL STYLING
+*************************************
+*************************************
+************************************/
+body {
+	background-color: #f2f3f4;
+}
+
+section {
+	margin-top: 58px;
+}
+/************************************
+GENERAL STYLING ENDING
+************************************/
+
+/************************************
+*************************************
+*************************************
+MEDIA QUERIES
+*************************************
+*************************************
+************************************/
+@media only screen and (min-width: 768px) {
+	/***************************
+HEADER BEGINNING IN MEDIA Q
+***************************/
+	.header__margin__left {
+		margin-left: 3rem;
+	}
+
+	.header__margin__right {
+		margin-right: 1rem;
+	}
+
+	.desktop__responsive__logo {
+		display: block;
+	}
+
+	/***************************
+HEADER ENDING IN MEDIA Q
+***************************/
+	/***************************
+JUMBOTRON IN MEDIA Q
+***************************/
+	.jumbotron p {
+		font-size: 20px;
+	}
+
+	.jumbotron-fluid {
+		height: 350px;
+	}
+	/***************************
+JUMBOTRON IN MEDIA Q
+***************************/
+}
+
+@media only screen and (min-width: 1224px) {
+	/***************************
+HEADER BEGINNING IN MEDIA Q
+***************************/
+	.header__margin__left {
+		margin-left: 3rem;
+	}
+
+	.header__margin__right {
+		margin-right: 3rem;
+	}
+	/***************************
+HEADER ENDING IN MEDIA Q
+***************************/
+}
+/************************************
+MEDIA QUERY ENDING
+************************************/

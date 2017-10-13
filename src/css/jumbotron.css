@@ -1,0 +1,48 @@
+/************************************
+*************************************
+*************************************
+HEADER JUMBOTRON STYLING
+*************************************
+*************************************
+************************************/
+.header__jumbo .jumbotron p {
+	font-size: 15px;
+}
+
+.header__jumbo .jumbotron-fluid {
+	height: 250px;
+	background-color: #fff;
+	background-image: url();
+}
+
+/* coloring in the jumbotron */
+.btn-outline-green {
+	color: #28b463;
+	background-image: none;
+	background-color: transparent;
+	border-color: #28b463;
+}
+
+.btn-outline-green:hover {
+	color: #fff;
+	background-image: none;
+	background-color: #28b463;
+	border-color: #28b463;
+}
+
+.btn-outline-purple {
+	color: #4a235a;
+	background-image: none;
+	background-color: transparent;
+	border-color: #4a235a;
+}
+
+.btn-outline-purple:hover {
+	color: #fff;
+	background-image: none;
+	background-color: #4a235a;
+	border-color: #4a235a;
+}
+/************************************
+HEADER JUMBOTRON STYLING ENDING
+************************************/

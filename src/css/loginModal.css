@@ -1,0 +1,83 @@
+.log__modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 102;
+	background: rgba(0, 0, 0, 0.8);
+	overflow: auto;
+	display: none;
+}
+
+.log__modal__content {
+	position: relative;
+	width: 100%;
+	max-width: 520px;
+	background-color: #ffffff;
+	opacity: 1;
+	margin: 64px auto;
+	padding: 20px;
+}
+
+.log__modal__header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	margin-bottom: 25px;
+}
+
+.log__facebook {
+	width: 100%;
+	min-height: 50px;
+	font-size: 19px;
+	font-weight: 700;
+	font-family: "Mukta", sans-serif;
+	color: #fff;
+	background-color: #4568b2;
+	border-color: #4568b2;
+}
+
+.log__google {
+	width: 100%;
+	min-height: 50px;
+	font-size: 19px;
+	font-weight: 700;
+	font-family: "Mukta", sans-serif;
+	border: 2px solid;
+	color: #484848;
+	background-image: none;
+	background-color: transparent;
+	border-color: #484848;
+}
+.google__logo__container {
+	width: 20px;
+}
+
+.log__twitter {
+	width: 100%;
+	min-height: 50px;
+	font-size: 19px;
+	font-weight: 700;
+	font-family: "Mukta", sans-serif;
+	color: #fff;
+	background-color: #1da1f2;
+	border-color: #1da1f2;
+}
+
+.log__github {
+	width: 100%;
+	min-height: 50px;
+	font-size: 19px;
+	font-weight: 700;
+	font-family: "Mukta", sans-serif;
+	color: #fff;
+	background-color: #000;
+	border-color: #000;
+}
+
+.log__modal__body button {
+	cursor: pointer;
+	margin-bottom: 20px;
+}
